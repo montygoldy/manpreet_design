@@ -14,9 +14,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/logo.png" alt="Logo" class="img-responsive">
-                </a>
+             
+                
+                <%= link_to image_tag("logo.png"), root_path, class: "navbar-brand" %>
             </div>
 
 
@@ -31,7 +31,7 @@
                         <span class="hover"></span>
                     </li>
                     <li>
-                        <a href="articles.html">Blog</a>
+                        <%= link_to "Blog", posts_path %>
                         <span class="hover"></span>
                     </li>
                     <li>
