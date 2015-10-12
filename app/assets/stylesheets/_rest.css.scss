@@ -320,6 +320,24 @@ ul.share_links li{
 	}
 }
 
+
+.contact_message, .home_project{
+.button{
+a{
+
+	&:hover{
+     background:$dark;
+     border:2px solid $dark;
+     color:$white;
+     transition:all .5s;
+     text-decoration:none;
+     }
+  }
+  }
+}
+
+
+
 @media screen and (max-width: 991px){
 	.section{
       
