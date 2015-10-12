@@ -29,6 +29,8 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'will_paginate', '~> 3.0.7'
 gem 'paperclip', '~> 4.3.1'
 gem 'mini_magick', '3.8.0'
+
+gem 'mail_form', '~> 1.5.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
