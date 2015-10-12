@@ -172,8 +172,12 @@
 	}
    
    .button{
+       clear:both;
+
+
     input[type="submit"]{
       border:2px solid $dark;
+      text-transform:uppercase;
 	font-weight:700;
     font-size:1.5em;
     padding:1rem 2rem;
@@ -183,9 +187,10 @@
      background:none;
      letter-spacing:1px;
 
+
      &:hover{
-     background:$highlight;
-     border:2px solid $highlight;
+     background:$dark;
+     border:2px solid $dark;
      color:$white;
      transition:all .5s;
      text-decoration:none;
@@ -258,7 +263,7 @@ ul.share_links li{
    padding:0 2rem 2rem;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
-    
+
    h2{
    color:$white!important;
    letter-spacing:1px;
@@ -288,6 +293,23 @@ ul.share_links li{
 
 .checkout_button{
 	margin-top:5%;
+}
+
+.edit_page{
+	 margin-bottom: 5%;
+    background:$highlight;
+    border-radius:2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+   
+
+	h1{
+	font-weight:bold;
+	text-transform:uppercase;
+	}
+
+	.button{
+	 padding-bottom:3rem;
+	}
 }
 
 @media screen and (max-width: 991px){
