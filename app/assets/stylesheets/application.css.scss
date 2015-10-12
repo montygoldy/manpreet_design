@@ -27,6 +27,7 @@ $black:#000;
 body{
 	font-family: 'Raleway', sans-serif;
 	background: image-url("subtle_dots.png") repeat;
+	margin-bottom:60px;
 }
 
 h2{
@@ -124,11 +125,19 @@ a:hover{
 
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 footer{
 	background:#000;
 	overflow:hidden;
-	padding:2rem 0;
-
+	line-height:60px;
+	height:60px;
+   position: absolute;
+   width:100%;
+    bottom: 0;
 	p{
 	color:$highlight;
    }
