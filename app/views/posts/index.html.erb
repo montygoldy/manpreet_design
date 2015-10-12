@@ -1,1 +1,53 @@
-<h1>hello World</h1>
+<!-- banner -->
+
+    <div id="banner_clean">
+        <h1>Blog post</h1>
+        <hr>
+    </div>
+
+    <!-- Info Content -->
+    <div class="info_container text-center article_container">
+        <div class="container">
+
+
+
+          <ul class="articles_list">
+
+              <% @posts.each do |post| %>
+              <li>
+                  <%= link_to post do %>
+                 
+                  <div class="col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2 col-xs-offset-0 col-xs-12 upper_info box info article">
+                      
+                        <h3><%= post.title %></h3>
+                        <h5 class="text-center">
+                         <i class="fa fa-user"></i> Posted by Manpreet
+                         <span><i class="fa fa-calendar-minus-o"></i> <%= post.created_at.strftime('%A, %d %b %Y') %></span>
+                     </h5>
+                     <hr>
+
+                     <%= markdown truncate(post.content, length: 150) %>
+                   </div>
+
+                  <% end %>
+               </li>
+
+               <% end %>
+
+              
+
+
+          </ul>
+
+
+      </div>
+
+      <!-- Pagination -->
+    
+    <div class="pagination">
+        <span class="previous_page disabled">Previous</span>
+        <em class="current">1</em>
+        <a rel="next" href="#">2</a>
+        <a class="next_page" href="#">Next</a>
+    </div>
+   </div>
