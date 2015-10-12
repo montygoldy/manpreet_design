@@ -252,6 +252,44 @@ ul.share_links li{
 }
 
 
+.description_project{
+	 background: #232323;
+    color: $text!important;
+   padding:0 2rem 2rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    
+   h2{
+   color:$white!important;
+   letter-spacing:1px;
+   }
+}
+
+.white_hr{
+	border:2px solid $white!important;
+}
+
+.skill_used_project{
+	    background: $highlight;
+    color: $dark !important;
+    margin:3% 0 0;
+     padding:0 2rem 2rem;
+     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+
+     h3{
+     color:$white!important;
+     text-transform:uppercase;
+     text-shadow:1px 1px 0 rgba(0,0,0,0.3);
+     font-weight:700;
+     }
+}
+
+
+.checkout_button{
+	margin-top:5%;
+}
+
 @media screen and (max-width: 991px){
 	.section{
       

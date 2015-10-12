@@ -43,7 +43,7 @@ input, textarea{
 	outline:none;
 }
 
-a:hover{
+a, a:focus, a:hover{
 	text-decoration:none;
 }
 
@@ -260,8 +260,10 @@ hr{
 	h1{
 	 text-align:center;
 	 color:$white;
+	}
 
-
+	h2{
+	text-transform:uppercase;
 	}
 }
 
@@ -360,7 +362,29 @@ hr{
 }
 }
 
+.editing_options ul li{
+	margin-right:2rem;
+	display:inline-block;
+	background:#efefef;
+    padding:2rem 0rem;
+    box-shadow:0 1px 1px rgba(0,0,0,.2);
+    border-radius:2px;
 
+	a{
+	  color:$dark;
+      padding:2rem;
+
+
+	}
+
+	 &:hover{
+        background:$dark;
+
+        a{
+          color:$white;
+        }
+      }
+}
 
 
 @import "home";

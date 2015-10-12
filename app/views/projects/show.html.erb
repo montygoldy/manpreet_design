@@ -1,45 +1,70 @@
 <!-- banner -->
 
-    <div id="banner">
-        <h2 class="text-center"> MY PROJECTS</h2>
-         <hr>
-    </div>
+<div id="banner">
+	<h2 class="text-center"> <%= @project.title %></h2>
+	<hr>
+</div>
 
 
-     <!-- Projects --> 
+<!-- Projects --> 
 
-       <div class="container projects_overview">
-         
+<div class="container projects_overview">
 
-       
-       <div class="row">
-       <ul>
 
-     
-         <li>
-            <div class="col-sm-6 col-md-offset-0 col-sm-offset-0 col-md-4 col-xs-8 col-xs-offset-2 home_project">
-               <div class="overlay_tag">
-                <a href="<%= @project.link %>" target="_blank">
-                <%= image_tag @project.thumbnail.url(:medium), class: "img-responsive img-rounded" %>
 
-                <!-- overlay -->
-                 
-                 <div class="overlay">
-                 </div>
-                    <div class="overlay_content">
-                      <h3 class="title text-center"><%= @project.title %></h3>
-                      <hr>
-                      <h4 class="skills_used text-center"><%= @project.skills %></h4>
-                   </div>
-                </a>
-                </div>
-            </div>
-         </li>
-       </ul>     
-    </div>   
+	<div class="row">
 
-    <%= link_to "Edit", edit_project_path(@project) %>
-    <%= link_to "Delete", project_path(@project), method: :delete, data: {confirm: "Are you sure"} %>
+		<div class="col-sm-6 col-md-offset-0 col-sm-offset-0 col-md-5 col-xs-8 col-xs-offset-2 home_project">
+			<div class="overlay_tag">
+				<a href="<%= @project.link %>" target="_blank">
+					<%= image_tag @project.thumbnail.url(:medium), class: "img-responsive img-rounded" %>
+				</a>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-offset-0 col-sm-offset-0 col-md-7 col-xs-8 col-xs-offset-2 home_project">
+		  <% unless @project.description.empty? %>
+			<div class="col-sm-12 col-md-12 col-xs-12 description_project">
+			   <h2 class="text-center">Description</h2>
+			   <hr class="white_hr">
+				<%= @project.description %>
+			</div>
+			<% end %>
+
+			<% unless @project.skills.empty? %>
+
+             <div class="col-sm-12 col-md-12 col-xs-12 skill_used_project">
+               <h2 class="text-center">Skills Used</h2>
+               <hr >
+				<h3 class="text-center"><%= @project.skills %></h3>
+			</div>
+			<% end %>
+
+			<% unless @project.link.empty? %>
+            <div class="col-sm-12 col-md-12 col-xs-12 checkout_button">
+				<div class="button">
+				<%= link_to "CHECK IT OUT NOW!!", @project.link, :target => "_blank" %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+
+
+         <div class="editing_options">
+           <ul>
+           	<li> <%= link_to edit_project_path(@project) do %> <i class="fa fa-pencil-square-o"></i> Edit Project <% end %></li>
+           	<li> <%= link_to project_path(@project), method: :delete, data: {confirm: "Are you sure"} do %><i class="fa fa-times"></i> Delete Project<% end %></li>
+           </ul>
+		     
+		
+
+		 
+		      
+		 </div>
+
+	</div>   
+
+
 
 </div>
 
