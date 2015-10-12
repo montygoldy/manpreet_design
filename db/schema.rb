@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012095325) do
+ActiveRecord::Schema.define(version: 20151012104813) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(version: 20151012095325) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.string   "slug"
   end
+
+  add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
 
 end
