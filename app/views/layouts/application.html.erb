@@ -35,5 +35,18 @@
 
 <%= render "layouts/footer" %>
 
+<script>
+$(document).ready(function(){
+  setTimeout(function(){
+      $("p.alert, p.notice").fadeOut("slow", function(){
+        $this.remove();
+      })
+  }, 4500);
+
+});
+  
+
+</script>
+
 </body>
 </html>

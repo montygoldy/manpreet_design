@@ -23,6 +23,8 @@
 
 			<hr class="article_share_hr">
 
+			
+
 
 			<h5 class="text-center share">Share</h5>
 
@@ -34,6 +36,19 @@
 				<li><a onclick="javascript:window.open('http://plus.google.com/share?url=<%=url_for([@post, {only_path: false}]) %>', '_blank', 'width=800', 'height=500', 'top=200', 'left=300');void(0);" ><i class="fa fa-google-plus"></i></a></li>
 			</ul>
 		</div>
+
+			<% if user_signed_in? %>
+			<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-xs-offset-0 col-xs-12 comment">
+			<div class="editing_options">
+				<ul>
+					<li> <%= link_to edit_post_path(@post) do %> <i class="fa fa-pencil-square-o"></i> Edit Article <% end %></li>
+					<li> <%= link_to post_path(@post), method: :delete, data: {confirm: "Are you sure"} do %><i class="fa fa-times"></i> Delete Article<% end %></li>
+				</ul>
+
+			</div>
+            </div>
+			<% end %>
+		
 
 		<div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-xs-offset-0 col-xs-12 upper_info box info comment">
 			<%= render "disqus" %>

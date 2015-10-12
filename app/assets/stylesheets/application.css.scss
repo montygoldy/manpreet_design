@@ -346,6 +346,20 @@ hr{
 	}
 }
 
+
+p.alert, p.notice{
+	background-color: rgba(0,0,0,.9);
+    padding: 1rem;
+    text-align: center;
+    color:#fff;
+    font-weight:bold;
+    position:absolute;
+    width:100%;
+    top:72px;
+    z-index:9999
+}
+
+
 @media screen and (max-width: 768px){
 	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
 	border:none!important;

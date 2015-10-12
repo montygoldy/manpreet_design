@@ -50,16 +50,13 @@
 		</div>
 
 
-         <div class="editing_options">
-           <ul>
+          <div class="editing_options">
+         <% if user_signed_in? %>
+            <ul>
            	<li> <%= link_to edit_project_path(@project) do %> <i class="fa fa-pencil-square-o"></i> Edit Project <% end %></li>
            	<li> <%= link_to project_path(@project), method: :delete, data: {confirm: "Are you sure"} do %><i class="fa fa-times"></i> Delete Project<% end %></li>
            </ul>
-		     
-		
-
-		 
-		      
+		    <% end %>  
 		 </div>
 
 	</div>   

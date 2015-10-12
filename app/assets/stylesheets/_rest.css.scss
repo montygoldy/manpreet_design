@@ -131,7 +131,7 @@
 	margin-top:3%;
 	overflow:hidden;
 
-	input[type="text"], input[type="email"]{
+	input[type="text"], input[type="email"], input[type="password"]{
 	display: block;
     font-size: 1em;
     margin: 0 0 1rem 0;
@@ -293,6 +293,14 @@ ul.share_links li{
 
 .checkout_button{
 	margin-top:5%;
+
+	.button{
+	padding-bottom:0rem;
+	}
+}
+
+.projects_overview .row{
+	margin-bottom:0;
 }
 
 .edit_page{

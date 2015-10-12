@@ -24,6 +24,7 @@
 
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                        <%= link_to "Projects", projects_path %>
@@ -35,9 +36,15 @@
                         <span class="hover"></span>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <%= link_to "Contact", new_contact_path %>
                         <span class="hover"></span>
                     </li>
+                    <% if user_signed_in? %>
+                      <li>
+                          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                          <span class="hover"></span>
+                      </li>
+                      <% end %>
                 </ul>
             </div>
         </div>
