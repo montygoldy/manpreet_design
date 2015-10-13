@@ -19,4 +19,14 @@ module ApplicationHelper
 
 		Redcarpet::Markdown.new(renderer, options).render(content).html_safe
 	end
+
+	def full_title(page_title = '')
+		base_title = "Manpreet Design"
+		if page_title.empty?
+			base_title
+		else
+			"#{page_title} | #{base_title}"
+		end
+		
+	end
 end
