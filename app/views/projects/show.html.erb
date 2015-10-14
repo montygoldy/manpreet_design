@@ -8,6 +8,7 @@
 </div>
 
 
+
 <!-- Projects --> 
 
 <div class="container projects_overview">
@@ -25,30 +26,29 @@
 		</div>
 
 		<div class="col-sm-6 col-md-offset-0 col-sm-offset-0 col-md-7 col-xs-8 col-xs-offset-2 home_project">
-		  <% unless @project.description.empty? %>
+		 
 			<div class="col-sm-12 col-md-12 col-xs-12 description_project">
 			   <h2 class="text-center">Description</h2>
 			   <hr class="white_hr">
 				<%= @project.description %>
 			</div>
-			<% end %>
+			
 
-			<% unless @project.skills.empty? %>
 
              <div class="col-sm-12 col-md-12 col-xs-12 skill_used_project">
                <h2 class="text-center">Skills Used</h2>
                <hr >
 				<h3 class="text-center"><%= @project.skills %></h3>
 			</div>
-			<% end %>
+		
 
-			<% unless @project.link.empty? %>
+		
             <div class="col-sm-12 col-md-12 col-xs-12 checkout_button">
 				<div class="button">
 				<%= link_to "CHECK IT OUT NOW!!", @project.link, :target => "_blank" %>
 				</div>
 			</div>
-			<% end %>
+		
 		</div>
 
 
@@ -65,5 +65,20 @@
 
 
 
+</div>
+
+
+<!-- Next Previous button -->
+
+
+<div class="next_button">
+  
+  <%= link_to "Prev" ,@next_project if !@next_project.nil? %> 
+	<i class="fa fa-angle-left"></i>
+</div>
+
+<div class="previous_button">
+    <%= link_to "Next", @prev_project if !@prev_project.nil? %>
+	<i class="fa fa-angle-right"></i>
 </div>
 

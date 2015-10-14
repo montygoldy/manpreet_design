@@ -14,6 +14,7 @@
 
 
 	<div class="row">
+
 		<ul>
 
            <% @projects.each do |project| %>
@@ -40,5 +41,12 @@
 
 			
 		</ul>      
-	</div>   
+	</div> 
+	<div class="editing_options">
+		<% if user_signed_in? %>
+		<ul>
+			<li> <%= link_to new_project_path do %> <i class="fa fa-plus"></i> Add New Project <% end %></li>
+			
+			<% end %>  
+		</div>  
 </div>

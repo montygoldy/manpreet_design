@@ -11,7 +11,13 @@
     <div class="info_container text-center article_container">
         <div class="container">
 
-
+         <div class="editing_options">
+    <% if user_signed_in? %>
+    <ul>
+      <li> <%= link_to new_post_path do %> <i class="fa fa-plus"></i> Add New Post <% end %></li>
+      
+      <% end %>  
+    </div>  
 
           <ul class="articles_list">
 

@@ -13,7 +13,7 @@
 </div>
 
 <!-- Info Content -->
-<div class="info_container article_container">
+<div class="info_container article_container project_overview">
 	<div class="container">
 
 		<!-- About Me -->
@@ -58,3 +58,16 @@
 	</div>
 </div>
 
+<!-- Next Previous button -->
+
+
+<div class="next_button">
+  
+  <%= link_to "Next" ,@next_post if !@next_post.nil? %> 
+	<i class="fa fa-angle-left"></i>
+</div>
+
+<div class="previous_button">
+    <%= link_to "Previous", @prev_post if !@prev_post.nil? %>
+	<i class="fa fa-angle-right"></i>
+</div>

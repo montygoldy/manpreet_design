@@ -22,7 +22,8 @@ class ProjectsController < ApplicationController
 	end
 
 	def show
-		
+		@next_project = @project.next
+		@prev_project = @project.prev
 	end
 
 	def edit

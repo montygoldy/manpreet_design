@@ -22,7 +22,8 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		
+		@next_post = @post.next
+		@prev_post = @post.prev
 	end
 
 	def edit
